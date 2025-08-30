@@ -1,0 +1,176 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(120deg, #a18cd1, #fbc2eb);
+  color: #333;
+  transition: background 0.5s ease;
+}
+
+h1, h2 {
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+/* Navbar */
+header.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header.nav nav a {
+  margin: 0 15px;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+header.nav nav a:hover, nav a.active {
+  color: #ffeb3b;
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 10%;
+  min-height: 100vh;
+}
+
+.hero-content {
+  max-width: 50%;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  color: #fff;
+}
+
+.hero-content .accent-text {
+  color: #ffeb3b;
+}
+
+.hero-img img {
+  width: 300px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  animation: float 3s infinite ease-in-out;
+}
+
+/* Animation for floating image */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Sections */
+.section {
+  padding: 60px 10%;
+}
+
+.glass {
+  background: rgba(255,255,255,0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  margin: 20px 0;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+}
+
+/* Buttons */
+.btn {
+  background: #ffeb3b;
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #333;
+  color: #ffeb3b;
+}
+
+.btn.ghost {
+  background: transparent;
+  border: 2px solid #ffeb3b;
+}
+
+/* Grid Projects */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  padding: 30px;
+  background: #fff3;
+  border-radius: 20px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+/* Skills */
+.skills span {
+  display: inline-block;
+  background: #fff3;
+  margin: 5px;
+  padding: 10px 15px;
+  border-radius: 15px;
+}
+
+/* Contact */
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 10px;
+}
+
+.socials a {
+  margin: 10px;
+  color: #fff;
+  font-size: 1.5rem;
+  transition: transform 0.3s;
+}
+
+.socials a:hover {
+  transform: scale(1.2);
+}
+
+/* Scroll to Top Button */
+#toTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #ffeb3b;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
